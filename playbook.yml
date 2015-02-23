@@ -1,0 +1,10 @@
+---
+- hosts: all
+  sudo: yes
+  vars_files:
+    - settings.yml
+  roles:
+    - { role: Stouts.mongodb, tags: ['mongodb']}
+    #- zufallsheld.lighttpd-gunicorn-flask
+    - { role: lighttpd-gunicorn-flask, tags: ['app_install', 'flask_install']}
+    # - app

@@ -1,0 +1,3 @@
+[submodule "roles/lighttpd-gunicorn-flask"]
+	path = roles/lighttpd-gunicorn-flask
+	url = git@github.com:p2/ansible-lighttpd-gunicorn-flask.git

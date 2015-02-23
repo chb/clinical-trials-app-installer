@@ -1,0 +1,23 @@
+---
+
+# Stouts.mongodb
+mongodb_shell:
+  clinicaltrialsapp:
+    - "db.main.ensureIndex({type: 1})"
+    - "db.main.ensureIndex({patient_id: 1})"
+
+# zufallsheld.lighttpd-gunicorn-flask
+lgf_supervisor_password: "testtest"
+
+lgf_app:
+  - server_name: "trials-app"
+    flask_app: "wsgi"
+    host: "192.168.88.22"
+    port: "80"
+    app_dir: "/var/www/html/trials-app"
+    virtualenv_dir: "/var/www/html/trials-app/env"
+    media_dir: "/media"
+    python_3: true
+    gunicorn_port: "12345"
+    repo: "git@github.com:chb/clinical-trials-app"
+    ssh_keyfile: "deploy_key"
