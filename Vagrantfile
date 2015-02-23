@@ -26,5 +26,8 @@ Vagrant.configure(2) do |config|
   config.vm.provision :ansible do |ansible|
     ansible.playbook = "playbook.yml"
     #ansible.verbose = "vvv"
+    ansible.extra_vars = {
+      vagrant_host: IP_ADDRESS
+    }
   end
 end

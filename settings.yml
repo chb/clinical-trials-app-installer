@@ -12,7 +12,7 @@ lgf_supervisor_password: "testtest"
 lgf_app:
   - server_name: "trials-app"
     flask_app: "wsgi"
-    host: "192.168.88.22"
+    host: "{{ vagrant_host }}"
     port: "80"
     app_dir: "/var/www/html/trials-app"
     virtualenv_dir: "/var/www/html/trials-app/env"

@@ -17,10 +17,9 @@ Scripts to setup and run a VM hosting the [clinical trials app][app].
         git clone --recursive https://github.com/chb/clinical-trials-app-installer
         cd clinical-trials-app-installer
 
-5. If the repo is a private repo:
-    - Create a new SSH key - without setting a password - into a local file: `ssh-keygen`
+5. Since the app repo is private, we need a deployment key:
+    - Create a new SSH key - without setting a password - into a local file named `deploy_key`: `ssh-keygen`
     - Add this key to your repo's "Deployment Keys" on GitHub
-    - Don't forget to specify the path to this file in `gf_app.ssh_keyfile`
 
 6. Adjust `settings.yml` to your liking
 7. Get the VM configured:
@@ -30,4 +29,4 @@ Scripts to setup and run a VM hosting the [clinical trials app][app].
 8. On your host machine you can now connect to the VM's hosted app at [http://localhost:8080]()
 
 [vagrant]: http://www.vagrantup.com/downloads
-[app]: h
+[app]: https://github.com/chb/clinical-trials-app
