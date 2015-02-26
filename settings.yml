@@ -14,10 +14,13 @@ lgf_app:
     flask_app: "wsgi"
     host: "{{ vagrant_host }}"
     port: "80"
+    gunicorn_port: "12345"
     app_dir: "/var/www/html/trials-app"
     virtualenv_dir: "/var/www/html/trials-app/env"
     media_dir: "/media"
     python_3: true
-    gunicorn_port: "12345"
     repo: "git@github.com:chb/clinical-trials-app"
     ssh_keyfile: "deploy_key"
+    extra_files:
+      - src: "app-config.py"
+        dest: "config.py"
