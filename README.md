@@ -2,8 +2,12 @@ Clinical Trials App Installer
 =============================
 
 Scripts to setup and run a VM hosting the [clinical trials app][app].
+These scripts take care of provisioning a VM, then installing and setting up Mongo, a lighttpd reverse proxy and all Python modules.
+Then the app is installed straight from GitHub.
 
-1. Install [Vagrant][] and `ansible`
+Perform all the following steps **on your local machine**:
+
+1. Install [Vagrant][] and [Ansible][]
 2. Install vagrant plugins:
 
         vagrant plugin install vagrant-vbguest
@@ -12,7 +16,7 @@ Scripts to setup and run a VM hosting the [clinical trials app][app].
 
         ansible-galaxy install Stouts.mongodb
 
-4. Clone this repo:
+4. Clone this repository:
 
         git clone --recursive https://github.com/chb/clinical-trials-app-installer
         cd clinical-trials-app-installer
@@ -30,4 +34,5 @@ Scripts to setup and run a VM hosting the [clinical trials app][app].
 9. On your host machine you can now connect to the VM's hosted app at [http://192.168.88.22]() (or the URL you have configured).
 
 [vagrant]: http://www.vagrantup.com/downloads
+[ansible]: http://docs.ansible.com/intro_installation.html#latest-releases-via-apt-ubuntu
 [app]: https://github.com/chb/clinical-trials-app
