@@ -14,7 +14,7 @@ lgf_app:
     flask_app: "wsgi"
     host: "{{ vagrant_host }}"
     port: "80"
-    gunicorn_port: "12345"
+    gunicorn_port: "4999"
     app_dir: "/var/www/html/trials-app"
     virtualenv_dir: "/var/www/html/trials-app/env"
     media_dir: "/media"
