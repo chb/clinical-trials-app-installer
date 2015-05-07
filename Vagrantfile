@@ -21,7 +21,14 @@ Vagrant.configure(2) do |config|
   if Vagrant.has_plugin?("vagrant-cachier")
     config.cache.scope = :box
   end
-
+  
+  # if you are behind a proxy
+  if Vagrant.has_plugin?("vagrant-proxyconf")
+    #config.proxy.http     = "http://yourproxy:8080"
+    #config.proxy.https    = "http://yourproxy:8080"
+    config.proxy.no_proxy = "localhost,127.0.0.1"
+  end
+  
   # play Ansible
   config.vm.provision :ansible do |ansible|
     ansible.playbook = "playbook.yml"
