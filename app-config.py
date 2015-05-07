@@ -4,7 +4,7 @@
 # copy to "config.py"
 
 DEBUG = 0
-USE_TEST_PATIENT = 0
+USE_TEST_PATIENT = 1
 SESSION_SECRET = "goeu824-aoeuclr29348"
 
 # SMART
