@@ -5,6 +5,8 @@ Scripts to setup and run a VM hosting the [clinical trials app][app].
 These scripts take care of provisioning a VM, then installing and setting up Mongo, a lighttpd reverse proxy and all Python modules.
 Then the app is installed straight from GitHub.
 
+### Installation
+
 Perform all the following steps **on your local machine**:
 
 1. Install [Vagrant][] and [Ansible][]
@@ -36,6 +38,19 @@ Perform all the following steps **on your local machine**:
         vagrant up
 
 10. On your host machine you can now connect to the VM's hosted app at [http://192.168.88.22]() (or the URL you have configured).
+
+### App Control
+
+The app is controlled using `supervisord`.
+To restart the app you'll tell supervisor to do so:
+
+```bash
+$ sudo supervisorctl
+Username: www-data
+Password: { see settings.yml -> lgf_supervisor_password }
+
+> restart trials-app
+```
 
 [vagrant]: http://www.vagrantup.com/downloads
 [ansible]: http://docs.ansible.com/intro_installation.html#latest-releases-via-apt-ubuntu

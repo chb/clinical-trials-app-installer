@@ -6,7 +6,7 @@ mongodb_shell:
     - "db.main.ensureIndex({type: 1})"
     - "db.main.ensureIndex({patient_id: 1})"
 
-# zufallsheld.lighttpd-gunicorn-flask
+# lighttpd-gunicorn-flask
 lgf_supervisor_password: "testtest"
 
 lgf_app:

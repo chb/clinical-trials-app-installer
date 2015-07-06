@@ -4,15 +4,16 @@
 # copy to "config.py"
 
 DEBUG = 0
-USE_TEST_PATIENT = 1
+USE_TEST_PATIENT = 0
+PATIENT_CACHE_TIMEOUT = 500
 SESSION_SECRET = "goeu824-aoeuclr29348"
 
 # SMART
 SMART_APP_ID = "my_web_app"
-SMART_API_BASE = "https://fhir-api-dstu2.smarthealthit.org"
+SMART_API_BASE = "https://fhir-open-api-dstu2.smarthealthit.org"
 SMART_REDIRECT = "http://{{item.0.host}}/fhir-app/"
 
-# LillyCOI API key (base64 encoded "key:secret" string)
+# TrialReach API key (base64 encoded "key:secret" string)
 TRIALREACH_SECRET = ""
 
 # Mongo params; leave host/port/db empty for default localhost connection
